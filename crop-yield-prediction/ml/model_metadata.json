@@ -1,0 +1,257 @@
+{
+  "model_name": "Extra Trees regression pipeline",
+  "feature_order": [
+    "Crop",
+    "Year",
+    "State Name",
+    "Dist Name",
+    "Area_ha",
+    "Temperature_C",
+    "Humidity_%",
+    "pH",
+    "Rainfall_mm",
+    "Wind_Speed_m_s",
+    "Solar_Radiation_MJ_m2_day"
+  ],
+  "target": "Yield_kg_per_ha",
+  "crops": [
+    "chickpea",
+    "cotton",
+    "maize",
+    "rice"
+  ],
+  "states": [
+    "Andhra Pradesh",
+    "Chhattisgarh",
+    "Karnataka",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Tamil Nadu",
+    "Telangana"
+  ],
+  "districts_by_state": {
+    "Andhra Pradesh": [
+      "Ananthapur",
+      "Chittoor",
+      "East Godavari",
+      "Guntur",
+      "Kadapa YSR",
+      "Krishna",
+      "Kurnool",
+      "S.P.S. Nellore",
+      "Srikakulam",
+      "Visakhapatnam",
+      "West Godavari"
+    ],
+    "Chhattisgarh": [
+      "Bastar",
+      "Bilaspur",
+      "Durg",
+      "Raigarh",
+      "Raipur",
+      "Surguja"
+    ],
+    "Karnataka": [
+      "Bangalore",
+      "Belgaum",
+      "Bellary",
+      "Bidar",
+      "Bijapur / Vijayapura",
+      "Chickmagalur",
+      "Chitradurga",
+      "Dakshina Kannada",
+      "Dharwad",
+      "Gulbarga / Kalaburagi",
+      "Hassan",
+      "Kodagu / Coorg",
+      "Kolar",
+      "Mandya",
+      "Mysore",
+      "Raichur",
+      "Shimoge",
+      "Tumkur",
+      "Uttara Kannada"
+    ],
+    "Madhya Pradesh": [
+      "Balaghat",
+      "Betul",
+      "Bhind",
+      "Chhatarpur",
+      "Chhindwara",
+      "Damoh",
+      "Datia",
+      "Dewas",
+      "Dhar",
+      "Guna",
+      "Gwalior",
+      "Hoshangabad",
+      "Indore",
+      "Jabalpur",
+      "Jhabua",
+      "Khandwa / East Nimar",
+      "Khargone / West Nimar",
+      "Mandla",
+      "Mandsaur",
+      "Morena",
+      "Narsinghpur",
+      "Panna",
+      "Raisen",
+      "Rajgarh",
+      "Ratlam",
+      "Rewa",
+      "Sagar",
+      "Satna",
+      "Sehore",
+      "Seoni / Shivani",
+      "Shahdol",
+      "Shajapur",
+      "Shivpuri",
+      "Sidhi",
+      "Tikamgarh",
+      "Ujjain",
+      "Vidisha"
+    ],
+    "Maharashtra": [
+      "Ahmednagar",
+      "Akola",
+      "Amarawati",
+      "Aurangabad",
+      "Beed",
+      "Bhandara",
+      "Bombay",
+      "Buldhana",
+      "Chandrapur",
+      "Dhule",
+      "Jalgaon",
+      "Kolhapur",
+      "Nagpur",
+      "Nanded",
+      "Nasik",
+      "Osmanabad",
+      "Parbhani",
+      "Pune",
+      "Raigad",
+      "Ratnagiri",
+      "Sangli",
+      "Satara",
+      "Solapur",
+      "Thane",
+      "Wardha",
+      "Yeotmal"
+    ],
+    "Tamil Nadu": [
+      "Chengalpattu MGR / Kanchipuram",
+      "Coimbatore",
+      "Kanyakumari",
+      "Madurai",
+      "North Arcot / Vellore",
+      "Ramananthapuram",
+      "Salem",
+      "South Arcot / Cuddalore",
+      "Thanjavur",
+      "The Nilgiris",
+      "Thirunelveli",
+      "Tiruchirapalli / Trichy"
+    ],
+    "Telangana": [
+      "Adilabad",
+      "Hyderabad",
+      "Karimnagar",
+      "Khammam",
+      "Mahabubnagar",
+      "Medak",
+      "Nalgonda",
+      "Nizamabad",
+      "Warangal"
+    ]
+  },
+  "observed_ranges": {
+    "Year": [
+      1966.0,
+      2017.0
+    ],
+    "Area_ha": [
+      10.0,
+      1034990.0
+    ],
+    "Temperature_C": [
+      20.0,
+      28.0
+    ],
+    "Humidity_%": [
+      60.0,
+      80.0
+    ],
+    "pH": [
+      6.0,
+      6.5
+    ],
+    "Rainfall_mm": [
+      600.0,
+      1200.0
+    ],
+    "Wind_Speed_m_s": [
+      1.5,
+      3.0
+    ],
+    "Solar_Radiation_MJ_m2_day": [
+      16.0,
+      22.0
+    ]
+  },
+  "observed_environment_values": {
+    "Temperature_C": [
+      20,
+      22,
+      25,
+      28
+    ],
+    "Humidity_%": [
+      60,
+      65,
+      70,
+      80
+    ],
+    "pH": [
+      6.0,
+      6.5
+    ],
+    "Rainfall_mm": [
+      600,
+      700,
+      800,
+      1200
+    ],
+    "Wind_Speed_m_s": [
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "Solar_Radiation_MJ_m2_day": [
+      16,
+      18,
+      20,
+      22
+    ]
+  },
+  "training_rows_in_csv_for_model_states": 21161,
+  "evaluation": {
+    "source": "Reported by the project owner from the training notebook; not recomputed by this application.",
+    "overall": {
+      "mae_kg_per_ha": 481.72,
+      "rmse_kg_per_ha": 809.12,
+      "r2": 0.7364
+    },
+    "r2_by_crop": {
+      "chickpea": 0.395,
+      "cotton": -0.065,
+      "maize": 0.526,
+      "rice": 0.684
+    },
+    "data_years": [
+      1966,
+      2017
+    ]
+  }
+}
